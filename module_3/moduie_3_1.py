@@ -14,7 +14,7 @@ def is_contains(string, list_to_search):
     count_calls()
     string = string.lower()
     for item in list_to_search:
-        if string == string.lower():
+        if string.lower() == item.lower():
             return True
     return False
 
