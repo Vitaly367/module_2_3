@@ -1,24 +1,24 @@
 # Создаем фунцию send_email
-def send_email(message, recipient, *, sender="university.help@gmail.com"):
+def send_email(message, recipient, sender="university.help@gmail.com"):
 
     # Проверка на корректоность email отправителя и получателя
     if "@" not in sender or not sender.endswith((".com", ".ru", ".net")):
-        print("Невозможно отправить письмо с адреса {sender} на адрес {recipient}")
+        print(f"Невозможно отправить письмо с адреса {sender} на адрес {recipient}")
         return
     if "@" not in recipient or not recipient.endswith((".com", ".ru", ".net")):
-        print("Невозможно отправить письмо с адреса {sender} на адрес {recipient}")
+        print(f"Невозможно отправить письмо с адреса {sender} на адрес {recipient}")
         return
 
     # Проверка отправления самому себе
     if sender == recipient:
-        print("Нельзя отправить письмо самому себе!")
+        print(f"Нельзя отправить письмо самому себе!")
         return
 
     # Проверка на отправителя по умолчанию
     if sender == "university.help@gmail.com":
-        print("Письмо успешно отправлено с адреса {sender} на адрес {recipient}.")
+        print(f"Письмо успешно отправлено с адреса {sender} на адрес {recipient}.")
     else:
-        print("НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса {sender} на адрес {recipient}.")
+        print(f"НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса {sender} на адрес {recipient}.")
 
 
 send_email('Это сообщение для проверки связи', 'vasyok1337@gmail.com')
